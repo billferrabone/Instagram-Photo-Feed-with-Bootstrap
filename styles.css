@@ -1,0 +1,10 @@
+#titulo {
+    display: flex;
+    padding-left: 200px;
+}
+#foto {
+    padding: right 20px;
+}
+.boton1 {
+    display: flex;
+}

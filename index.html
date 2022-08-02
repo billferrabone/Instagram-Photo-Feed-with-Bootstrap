@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Instagram Photo Feed with Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- inicio navbar -->
+<div class="container-fluid">
+    <nav class="navbar bg-secondary bg-gradient d-flex">
+    <div class="container-fluid align-items-start">
+            <div class="navbar-brand d-flex" style="font-family: 'Lobster', cursive; color: rgb(22, 22, 22)"
+            href="#">
+                <i class="bi bi-instagram fs-1 pe-3 ps-3"></i> 
+                <h5 class="display-5"><strong>Instagram</strong></h5>
+            </div>
+        <div class="row">
+            <div class="col-7">
+                <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Post</button> -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    New Post
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Upload your new instagram post with a caption!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="/url" method="GET">
+                                <textarea rows = "5" cols = "60" name = "description" placeholder="Enter caption here...">
+                                    Enter details here...
+                                 </textarea><br>
+                                <input type="file">
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary">Uplaod</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="btn-group dropstart ps-0">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu margin-right-md">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <br>
+                      <li><a class="dropdown-item" href="#">Log Out</a></li>
+                    </ul>
+                  </div>
+            </div>
+        </div> 
+    </div>
+        </nav> 
+    <!-- cierra navbar -->  
+        <!-- inicio navbar para ver tipos de vista -->
+        <div class="toggle bg-secondary bg-gradient">
+            <ul class="nav nav-pills mb-3 justify-content-center col-12 bg-gradient" id="pills-tab" role="tablist">
+                <li class="nav-item bg-gradient" role="presentation">
+                  <button class="nav-link active justify-content-center bg-dark bg-gradient" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i class="bi bi-grid"></i></button>
+                </li>
+                <li class="nav-item bg-gradient" role="presentation">
+                  <button class="nav-link justify-content-center bg-dark bg-gradient" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="bi bi-square-fill"></i></button>
+                </li>
+            </ul>    
+        </div>
+            <!-- cierre de cambio tipo de vista -->
+            <!-- inicio vista grid -->
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active container text-center" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                    <div class="row">
+                        <div class="col-4 col-md-4 col-lg-4">
+                        <div class="card">
+                            <img src="https://st3.idealista.it/cms/archivie/styles/idcms_large_desktop/public/2018-10/media/image/colosseo_flickr_0.png?fv=x5SFM2W3&itok=YZZ8n8UR"  alt="lights" style="width: 100%; height: 100%;">
+                        </div>
+                        </div>
+                        <div class="col-4 col-md-4 col-lg-4">
+                            <div class="card">
+                            <img src="https://st3.idealista.it/cms/archivie/styles/idcms_large_desktop/public/2018-10/media/image/trevi_pixabay.jpg?fv=hq97rmAS&itok=ox7H8UxK" alt="lights" style="width: 100%; height: 100%;">
+                            </div>
+                        </div>    
+                        <div class="col-4 col-md-4 col-lg-4">
+                            <div class="card">
+                            <img src="https://st3.idealista.it/cms/archivie/styles/idcms_large_desktop/public/2018-10/media/image/pontevecchio_flickr.png?fv=-niXx9AA&itok=PkitFvdR" class="card-img-top" alt="...">
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="row">
+                        <div class="col-4 col-md-4 col-lg-4">
+                        <div class="card">
+                            <img src="https://st3.idealista.it/cms/archivie/styles/idcms_large_desktop/public/2018-10/media/image/torre-pisa_pixabay.jpg?fv=6RmXgMaq&itok=p13RULaD" class="card-img-top" alt="...">
+                        </div>
+                        </div>
+                        <div class="col-4 col-md-4 col-lg-4">
+                            <div class="card">
+                            <img src="https://st3.idealista.it/cms/archivie/styles/idcms_large_desktop/public/2018-10/media/image/duomo_milano_wikimedia_commons.png?fv=PSg1tyHZ&itok=-5vuIQJU" class="card-img-top" alt="...">
+                            </div>
+                        </div>    
+                        <div class="col-4 col-md-4 col-lg-4">
+                            <div class="card">
+                            <img src="https://st3.idealista.it/cms/archivie/styles/idcms_large_desktop/public/2018-10/media/image/sanmarco_flickr.png?fv=WeJXzX-4&itok=83eAax14" class="card-img-top" alt="...">
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="row">
+                        <div class="col-4 col-md-4 col-lg-4">
+                        <div class="card">
+                            <img src="https://st3.idealista.it/cms/archivie/styles/idcms_large_desktop/public/2018-10/media/image/monreale_pixabay.jpg?fv=IwRoyLT9&itok=tMMuCPJe=" class="card-img-top" alt="...">
+                        </div>
+                        </div>
+                        <div class="col-4 col-md-4 col-lg-4">
+                            <div class="card">
+                            <img src="https://st3.idealista.it/cms/archivie/styles/idcms_large_desktop/public/2018-10/media/image/1280px-arena_di_verona_ingresso.jpg?fv=IGc6y2cv&itok=Fz9AzLhq" class="card-img-top" alt="...">
+                            </div>
+                        </div>    
+                        <div class="col-4 col-md-4 col-lg-4">
+                            <div class="card">
+                            <img src="https://st3.idealista.it/cms/archivie/styles/idcms_large_desktop/public/2018-10/media/image/napoli_-_castel_dellovo_wikipedia.jpg?fv=gL-kBQCG&itok=1WwJRyxa" class="card-img-top" alt="...">
+                            </div>
+                        </div>    
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col-4 col-md-4 col-lg-4">
+                        <div class="card">
+                            <img src="https://wallpaperaccess.com/full/1940049.jpg" class="card-img-top" alt="...">
+                        </div>
+                        </div>
+                        <div class="col-4 col-md-4 col-lg-4">
+                            <div class="card">
+                            <img src="https://wallpaperaccess.com/full/39608.jpg" class="card-img-top" alt="...">
+                            </div>
+                        </div> 
+                        <div class="col-4 col-md-4 col-lg-4">
+                            <div class="card">
+                            <img src="https://wallpaperaccess.com/full/39608.jpg" class="card-img-top" alt="...">
+                            </div>
+                        </div>   
+                    </div> -->
+                </div>
+                <!-- cierre vista grid -->
+                <!-- inicio feed instagram -->
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                <div class="align-items-center h-100">  
+                    <div class="card col-6 mx-auto border-secondary mb-5 bg-light">
+                        <h5 class="display-5">My first photo</h5>
+                        <img src="https://st3.idealista.it/cms/archivie/styles/idcms_large_desktop/public/2018-10/media/image/colosseo_flickr_0.png?fv=x5SFM2W3&itok=YZZ8n8UR" class="card-img-top" alt="...">
+                        <br>
+                        <p><strong><i class="bi bi-heart-fill"></i>200 likes</strong></p>
+                        <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit amet. Qui delectus placeat aut optio aperiam nam neque dolor aut eaque internos. Sit reiciendis dolorem eos explicabo est quaerat dicta aut consequuntur maxime et repudiandae libero in beatae facilis et ratione galisum! Et impedit atque qui sequi </p>
+                        </div>
+                    </div>
+                    <div class="card col-6 mx-auto border-secondary mb-5 bg-light">
+                        <h5 class="display-5">My second photo</h5>
+                        <img src="https://st3.idealista.it/cms/archivie/styles/idcms_large_desktop/public/2018-10/media/image/trevi_pixabay.jpg?fv=hq97rmAS&itok=ox7H8UxK" class="card-img-top" alt="...">
+                        <br>
+                        <p><strong><i class="bi bi-heart-fill"></i>200 likes</strong></p>
+                        <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit amet. Qui delectus placeat aut optio aperiam nam neque dolor aut eaque internos. Sit reiciendis dolorem eos explicabo est quaerat dicta aut consequuntur maxime et repudiandae libero in beatae facilis et ratione galisum! Et impedit atque qui sequi </p>
+                        </div>
+                    </div>
+                    <div class="card col-6 mx-auto border-secondary mb-5 bg-light">
+                        <h5 class="display-5">My third photo</h5>
+                        <img src="https://st3.idealista.it/cms/archivie/styles/idcms_large_desktop/public/2018-10/media/image/pontevecchio_flickr.png?fv=-niXx9AA&itok=PkitFvdR" class="card-img-top" alt="...">
+                        <br>
+                        <p><strong><i class="bi bi-heart-fill"></i>200 likes</strong></p>
+                        <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit amet. Qui delectus placeat aut optio aperiam nam neque dolor aut eaque internos. Sit reiciendis dolorem eos explicabo est quaerat dicta aut consequuntur maxime et repudiandae libero in beatae facilis et ratione galisum! Et impedit atque qui sequi </p>
+                        </div>
+                    </div>
+                    <div class="card col-6 mx-auto border-secondary mb-5 bg-light">
+                        <h5 class="display-5">My fourth photo</h5>
+                        <img src="https://st3.idealista.it/cms/archivie/styles/idcms_large_desktop/public/2018-10/media/image/torre-pisa_pixabay.jpg?fv=6RmXgMaq&itok=p13RULaD" class="card-img-top" alt="...">
+                        <br>
+                        <p><strong><i class="bi bi-heart-fill"></i>200 likes</strong></p>
+                        <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit amet. Qui delectus placeat aut optio aperiam nam neque dolor aut eaque internos. Sit reiciendis dolorem eos explicabo est quaerat dicta aut consequuntur maxime et repudiandae libero in beatae facilis et ratione galisum! Et impedit atque qui sequi </p>
+                        </div>
+                    </div>
+                    <div class="card col-6 mx-auto border-secondary mb-5 bg-light">
+                        <h5 class="display-5">My fifth photo</h5>
+                        <img src="https://st3.idealista.it/cms/archivie/styles/idcms_large_desktop/public/2018-10/media/image/duomo_milano_wikimedia_commons.png?fv=PSg1tyHZ&itok=-5vuIQJU" class="card-img-top" alt="...">
+                        <br>
+                        <p><strong><i class="bi bi-heart-fill"></i>200 likes</strong></p>
+                        <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit amet. Qui delectus placeat aut optio aperiam nam neque dolor aut eaque internos. Sit reiciendis dolorem eos explicabo est quaerat dicta aut consequuntur maxime et repudiandae libero in beatae facilis et ratione galisum! Et impedit atque qui sequi </p>
+                        </div>
+                    </div> 
+                    <div class="card col-6 mx-auto border-secondary mb-5 bg-light">
+                        <h5 class="display-5">My sixt photo</h5>
+                        <img src="https://st3.idealista.it/cms/archivie/styles/idcms_large_desktop/public/2018-10/media/image/sanmarco_flickr.png?fv=WeJXzX-4&itok=83eAax14" class="card-img-top" alt="...">
+                        <br>
+                        <p><strong><i class="bi bi-heart-fill"></i>200 likes</strong></p>
+                        <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit amet. Qui delectus placeat aut optio aperiam nam neque dolor aut eaque internos. Sit reiciendis dolorem eos explicabo est quaerat dicta aut consequuntur maxime et repudiandae libero in beatae facilis et ratione galisum! Et impedit atque qui sequi </p>
+                        </div>
+                    </div>
+                </div>      
+            </div>
+            <!-- fin feed instagram -->
+        </div> 
+        </div> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    </div>
+</body>  
+</body>
+</html>
